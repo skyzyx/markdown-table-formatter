@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	markdowntableformatter "github.com/sters/markdown-table-formatter/formatter"
+	markdowntableformatter "github.com/skyzyx/markdown-table-formatter/formatter"
 )
 
 type config struct {
