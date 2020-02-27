@@ -18,7 +18,7 @@ func splitLine(text string) []string {
 func splitColumn(text string) []string {
 	columns := strings.Split(strings.Trim(text, "|"), "|")
 	for idx, line := range columns {
-		columns[idx] = strings.TrimSpace(line)
+		columns[idx] = fmt.Sprintf(" %s ", strings.TrimSpace(line))
 	}
 
 	return columns
