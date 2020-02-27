@@ -18,7 +18,7 @@ func splitLine(text string) []string {
 func splitColumn(text string) []string {
 	columns := strings.Split(strings.Trim(text, "|"), "|")
 	for idx, line := range columns {
-		columns[idx] = fmt.Sprintf(" %s ", strings.TrimSpace(line))
+		columns[idx] = strings.TrimSpace(line)
 	}
 
 	return columns
@@ -102,10 +102,10 @@ func fixColumnSize(text string) string {
 			column := line[columnIdx]
 
 			if hasSeparatorLine && lineIdx == 1 {
-				lines[lineIdx][columnIdx] = strings.Repeat("-", length)
+				lines[lineIdx][columnIdx] = strings.Repeat("-", length + 2)
 			} else {
 				lines[lineIdx][columnIdx] = fmt.Sprintf(
-					"%s%s",
+					" %s%s ",
 					column,
 					strings.Repeat(" ", length-calculateLength(column)),
 				)
