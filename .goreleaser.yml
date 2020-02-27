@@ -8,7 +8,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - 386
 archive:
   format: zip
   name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
@@ -16,5 +15,5 @@ archive:
     - README.md
 release:
   github:
-    owner: sters
+    owner: skyzyx
     name: markdown-table-formatter
