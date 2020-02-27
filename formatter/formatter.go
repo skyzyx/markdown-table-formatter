@@ -183,5 +183,5 @@ func Execute(text string) string {
 		}
 	}
 
-	return strings.Join(lines, "\n")
+	return fmt.Sprintf("%s\n\n", strings.Join(lines, "\n"))
 }
